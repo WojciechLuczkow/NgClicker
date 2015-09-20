@@ -31,12 +31,14 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <Label x:Name="label1" Content="Click scenarios" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" FontSize="16"/>
-                <ListView x:Name="listViewScenarios" Grid.Row="1" BorderBrush="White"/>
-                <Button x:Name="buttonLaunch" Content="Launch" HorizontalAlignment="Stretch" Height="30" Grid.Row="2" FontSize="16"/>
+                <ComboBox ItemsSource="{Binding AvailableModes}" Grid.Row="1" FontSize="12" />
+                <ListView x:Name="listViewScenarios" Grid.Row="2" BorderBrush="White"/>
+                <Button x:Name="buttonLaunch" Content="Launch" HorizontalAlignment="Stretch" Height="30" Grid.Row="3" FontSize="16"/>
             </Grid>
         </Border>
         <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Left" Height="100" Margin="-175,240,0,0" VerticalAlignment="Top" Width="5"/>

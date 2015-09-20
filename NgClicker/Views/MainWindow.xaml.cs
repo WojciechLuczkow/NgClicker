@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using NgClicker.Models;
+using System.Windows;
 
 namespace NgClicker
 {
@@ -9,7 +10,11 @@ namespace NgClicker
     {
         public MainWindow()
         {
+            this.Model = new MainModel();
+            this.DataContext = this.Model;
             InitializeComponent();
         }
+
+        public MainModel Model { get; private set; }
     }
 }
