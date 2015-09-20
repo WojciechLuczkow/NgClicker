@@ -1,18 +1,15 @@
-﻿using NgClicker.Models;
-using System.Windows;
-
-namespace NgClicker
+﻿namespace NgClicker
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    using System.Windows;
+    using NgClicker.Models;
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             this.Model = new MainModel();
             this.DataContext = this.Model;
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         public MainModel Model { get; private set; }
